@@ -1,8 +1,8 @@
-using Catalog.Infrastructure;
-using MediatR;
-using System.Reflection;
-using Catalog.Application;
-namespace Catalog.UI
+
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
+
+namespace APIGateway.API
 {
     public class Program
     {
@@ -11,12 +11,17 @@ namespace Catalog.UI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddCatalogApplicationDependencyInjection();
-            builder.Services.AddCatalogInfrastructureDepencyInjection(builder.Configuration);
+
+            builder.Configuration.AddJsonFile("ocelot.json");
+
+            builder.Services.AddOcelot();
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+
 
             var app = builder.Build();
 
@@ -27,6 +32,7 @@ namespace Catalog.UI
                 app.UseSwaggerUI();
             }
 
+            app.UseOcelot();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
