@@ -26,9 +26,9 @@ namespace Catalog.UI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll(GetAllProductCatalogsQuery query)
+        public async Task<IActionResult> GetAll()
         {
-            var res = await _mediator.Send(query);
+            var res = await _mediator.Send(new GetAllProductCatalogsQuery());
             return Ok(res);
         }
 
