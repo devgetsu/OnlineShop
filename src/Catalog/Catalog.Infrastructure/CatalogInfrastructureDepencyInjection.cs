@@ -1,4 +1,5 @@
-﻿using Catalog.Infrastructure.Persistance;
+﻿using Catalog.Application.Abstractions;
+using Catalog.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,9 +11,9 @@ namespace Catalog.Infrastructure
         public static IServiceCollection AddCatalogInfrastructureDepencyInjection(this IServiceCollection services, IConfiguration configuration)
         {
 
-            services.AddDbContext<CatalogDbContext>(options =>
+            services.AddDbContext<IApplicationDbContext, CatalogDbContext>(options =>
             {
-                options.UseLazyLoadingProxies().UseNpgsql("Con");
+                options.UseLazyLoadingProxies().UseNpgsql(configuration.GetConnectionString("Con"));
             });
 
             return services;

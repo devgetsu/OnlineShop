@@ -28,6 +28,7 @@ namespace Catalog.Application.UseCases.ProductCatalogs.Handlers.CommandHandlers
                 {
                     Name = request.Name,
                     Description = request.Description,
+                    IsDeleted = false
                 };
 
                 await _applicationDbContext.ProductCatalogs.AddAsync(catalog);

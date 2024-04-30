@@ -52,7 +52,7 @@ namespace Catalog.UI.Controllers
             return Ok(res);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Update(UpdateProductCatalogCommand command)
         {
             var res = await _mediator.Send(command);
