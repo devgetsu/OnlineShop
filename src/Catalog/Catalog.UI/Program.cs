@@ -1,4 +1,5 @@
-
+using MediatR;
+using System.Reflection;
 namespace Catalog.UI
 {
     public class Program
@@ -13,6 +14,7 @@ namespace Catalog.UI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
             var app = builder.Build();
 
