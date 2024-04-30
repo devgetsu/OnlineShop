@@ -1,3 +1,4 @@
+using Catalog.Infrastructure;
 using MediatR;
 using System.Reflection;
 namespace Catalog.UI
@@ -10,7 +11,7 @@ namespace Catalog.UI
 
             // Add services to the container.
             builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
-
+            builder.Services.AddCatalogInfrastructureDepencyInjection(builder.Configuration);
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
