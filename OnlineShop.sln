@@ -47,7 +47,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cart.Infrastructure", "src\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIGateway", "APIGateway", "{2562A8E8-FDC5-458A-96A6-880125E7CC29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway.API", "src\APIGateway\APIGateway.API\APIGateway.API.csproj", "{92F2C101-2350-4F0B-AEB6-577A220F0C85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIGateway.API", "src\APIGateway\APIGateway.API\APIGateway.API.csproj", "{92F2C101-2350-4F0B-AEB6-577A220F0C85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

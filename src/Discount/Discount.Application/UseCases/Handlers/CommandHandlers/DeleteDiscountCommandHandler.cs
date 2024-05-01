@@ -3,11 +3,6 @@ using Discount.Application.UseCases.Commands;
 using Discount.Domain.DTOs;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Discount.Application.UseCases.Handlers.CommandHandlers
 {
@@ -54,5 +49,4 @@ namespace Discount.Application.UseCases.Handlers.CommandHandlers
             }
         }
     }
-}
 }
