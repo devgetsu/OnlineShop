@@ -81,11 +81,11 @@
           "Port": 7126
         }
       ],
-      "UpstreamPathTemplate": "/api/GetDiscount/",
+      "UpstreamPathTemplate": "/api/GetDiscount/{id}",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/api/Discount",
+      "DownstreamPathTemplate": "/api/Discount/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -93,9 +93,9 @@
           "Port": 7126
         }
       ],
-      "UpstreamPathTemplate": "/api/Discounts/",
-      "UpstreamHttpMethod": [ "Get" ]
-    }
+      "UpstreamPathTemplate": "/api/DeleteDiscounts/{id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
   ],
   "GlobalConfiguration": {
     "BaseUrl": "https://localhost:7013"
