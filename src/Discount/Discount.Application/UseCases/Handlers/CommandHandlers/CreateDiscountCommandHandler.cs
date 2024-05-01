@@ -36,7 +36,7 @@ namespace Discount.Application.UseCases.Handlers.CommandHandlers
                 await _applicationDbContext.Discounts.AddAsync(discount);
                 await _applicationDbContext.SaveChanagesAsync(cancellationToken);
 
-                return new ResponceModel
+                return new ResponceModel()
                 {
                     Message = "Discount Created",
                     StatusCode = 201,
@@ -45,7 +45,7 @@ namespace Discount.Application.UseCases.Handlers.CommandHandlers
             }
             catch (Exception ex)
             {
-                return new ResponceModel
+                return new ResponceModel()
                 {
                     Message = ex.Message,
                     StatusCode = 500,
