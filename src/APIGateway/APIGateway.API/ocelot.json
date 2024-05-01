@@ -9,8 +9,59 @@
           "Port": 7115
         }
       ],
-      "UpstreamPathTemplate": "/api/Catalog",
+      "UpstreamPathTemplate": "/api/Catalogs",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ProductCatalog",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7115
+        }
+      ],
+      "UpstreamPathTemplate": "/api/CreateCatalog/{id}",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ProductCatalog/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7115
+        }
+      ],
+      "UpstreamPathTemplate": "/api/DeleteCatalog/{id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ProductCatalog/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7115
+        }
+      ],
+      "UpstreamPathTemplate": "/api/UpdateCatalog/{id}",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ProductCatalog/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7115
+        }
+      ],
+      "UpstreamPathTemplate": "/api/GetCatalog/{id}",
       "UpstreamHttpMethod": [ "Get" ]
     }
-  ]
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7013"
+  }
 }

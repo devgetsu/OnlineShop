@@ -1,6 +1,7 @@
 ﻿using Catalog.Application.UseCases.ProductCatalogs.Commands;
 using Catalog.Application.UseCases.ProductCatalogs.Queries;
 using MediatR;
+using Catalog.Domain.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -53,8 +54,14 @@ namespace Catalog.UI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(UpdateProductCatalogCommand command)
+        public async Task<IActionResult> Update(Guid id, UpdateProductDTO product)
         {
+            var command = new UpdateProductCatalogCommand()
+            {
+                Id = id,
+                Name = product.ProductName,
+                Description = product.ProductDescription
+            };
             var res = await _mediator.Send(command);
             return Ok(res);
         }

@@ -22,22 +22,36 @@ namespace Discount.Application.UseCases.Handlers.CommandHandlers
 
         public async Task<ResponceModel> Handle(CreateDiscountCommand request, CancellationToken cancellationToken)
         {
-            var discount = new ProductDiscount()
+            try
             {
-                ProductId = request.ProductId,
-                CuponCode = request.CuponCode,
-                StartedDate = request.StartedDate,
-                EndedTime = request.EndedTime,
-            };
 
-            await _applicationDbContext.Discounts.AddAsync(discount);
-            await _applicationDbContext.SaveChanagesAsync(cancellationToken);
-            return new ResponceModel
+                var discount = new ProductDiscount()
+                {
+                    ProductId = request.ProductId,
+                    CuponCode = request.CuponCode,
+                    StartedDate = request.StartedDate,
+                    EndedTime = request.EndedTime,
+                };
+
+                await _applicationDbContext.Discounts.AddAsync(discount);
+                await _applicationDbContext.SaveChanagesAsync(cancellationToken);
+
+                return new ResponceModel
+                {
+                    Message = "Discount Created",
+                    StatusCode = 201,
+                    IsSuccess = true
+                };
+            }
+            catch (Exception ex)
             {
-                Message = "Discount Created",
-                StatusCode = 201,
-                IsSuccess = true
-            };
+                return new ResponceModel
+                {
+                    Message = ex.Message,
+                    StatusCode = 500,
+                    IsSuccess = false
+                };
+            }
         }
     }
 }
