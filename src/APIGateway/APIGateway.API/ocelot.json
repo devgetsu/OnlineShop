@@ -61,7 +61,7 @@
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/api/Discount",
+      "DownstreamPathTemplate": "/api/Discount/",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -69,11 +69,11 @@
           "Port": 7126
         }
       ],
-      "UpstreamPathTemplate": "/api/Discounts/{id}",
+      "UpstreamPathTemplate": "/api/GetDiscounts/",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/api/Discount",
+      "DownstreamPathTemplate": "/api/Discount/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -81,7 +81,7 @@
           "Port": 7126
         }
       ],
-      "UpstreamPathTemplate": "/api/Discounts/",
+      "UpstreamPathTemplate": "/api/GetDiscount/",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
