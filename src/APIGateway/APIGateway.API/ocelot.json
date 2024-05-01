@@ -60,6 +60,9 @@
       "UpstreamPathTemplate": "/api/GetCatalog/{id}",
       "UpstreamHttpMethod": [ "Get" ]
     },
+
+
+
     {
       "DownstreamPathTemplate": "/api/Discount/",
       "DownstreamScheme": "https",
@@ -96,6 +99,95 @@
       "UpstreamPathTemplate": "/api/DeleteDiscounts/{id}",
       "UpstreamHttpMethod": [ "Delete" ]
     },
+    {
+      "DownstreamPathTemplate": "/api/Discount/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7126
+        }
+      ],
+      "UpstreamPathTemplate": "/api/UpdateDiscounts/{id}",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Discount/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7126
+        }
+      ],
+      "UpstreamPathTemplate": "/api/PostDiscount/",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/Ordering",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7126
+        }
+      ],
+      "UpstreamPathTemplate": "/api/GetOrderings/",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Ordering/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7126
+        }
+      ],
+      "UpstreamPathTemplate": "/api/GetOrdering/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Ordering/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7126
+        }
+      ],
+      "UpstreamPathTemplate": "/api/DeleteOrdering/{id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Ordering/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7126
+        }
+      ],
+      "UpstreamPathTemplate": "/api/UpdateOrdering/{id}",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Ordering/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7126
+        }
+      ],
+      "UpstreamPathTemplate": "/api/PostOrdering/",
+      "UpstreamHttpMethod": [ "Post" ]
+    }
   ],
   "GlobalConfiguration": {
     "BaseUrl": "https://localhost:7013"
