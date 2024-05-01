@@ -134,7 +134,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7126
+          "Port": 7208
         }
       ],
       "UpstreamPathTemplate": "/api/GetOrderings/",
@@ -146,7 +146,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7126
+          "Port": 7208
         }
       ],
       "UpstreamPathTemplate": "/api/GetOrdering/{id}",
@@ -158,7 +158,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7126
+          "Port": 7208
         }
       ],
       "UpstreamPathTemplate": "/api/DeleteOrdering/{id}",
@@ -170,7 +170,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7126
+          "Port": 7208
         }
       ],
       "UpstreamPathTemplate": "/api/UpdateOrdering/{id}",
@@ -182,7 +182,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7126
+          "Port": 7208
         }
       ],
       "UpstreamPathTemplate": "/api/PostOrdering/",
